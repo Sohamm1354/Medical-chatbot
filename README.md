@@ -1,72 +1,31 @@
 # End-to-end-Medical-Chatbot-using-Llama2
 
-# How to run?
-### STEPS:
+🩺 End-to-End Medical Chatbot using LLaMA2, LangChain, HuggingFace & Pinecone
+This project is an AI-powered medical chatbot built using LangChain, LLaMA2 (via CTransformers), HuggingFace sentence embeddings, and Pinecone vector store. It enables users to ask medical-related queries, and provides context-aware, relevant answers by retrieving information from PDF-based medical documents.
 
-Clone the repository
+🔍 Features
+✅ Extracts and processes medical data from PDF documents
 
-```bash
-Project repo: https://github.com/
-```
+✅ Splits documents into meaningful chunks for better retrieval
 
-### STEP 01- Create a conda environment after opening the repository
+✅ Embeds text using HuggingFace Transformers
 
-```bash
-conda create -n mchatbot python=3.8 -y
-```
+✅ Stores and indexes embeddings using Pinecone
 
-```bash
-conda activate mchatbot
-```
+✅ Retrieves top relevant document chunks for user queries
 
-### STEP 02- install the requirements
-```bash
-pip install -r requirements.txt
-```
+✅ Uses LLaMA2 language model for generating informative answers
 
+✅ Integrates a web-based chat interface using Flask
 
-### Create a `.env` file in the root directory and add your Pinecone credentials as follows:
+| Technology                 | Purpose                                       |
+| -------------------------- | --------------------------------------------- |
+| **LangChain**              | Prompt management, document loading, QA chain |
+| **LLaMA2 (CTransformers)** | Local LLM for generating answers              |
+| **HuggingFace Embeddings** | Semantic text embeddings                      |
+| **Pinecone**               | Vector storage and similarity search          |
+| **Flask**                  | Web server for user interaction               |
+| **HTML/CSS**               | Frontend for the chatbot interface            |
 
-```ini
-PINECONE_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-PINECONE_API_ENV = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-```
-
-
-### Download the quantize model from the link provided in model folder & keep the model in the model directory:
-
-```ini
-## Download the Llama 2 Model:
-
-llama-2-7b-chat.ggmlv3.q4_0.bin
-
-
-## From the following link:
-https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/tree/main
-```
-
-```bash
-# run the following command
-python store_index.py
-```
-
-```bash
-# Finally run the following command
-python app.py
-```
-
-Now,
-```bash
-open up localhost:
-```
-
-
-### Techstack Used:
-
-- Python
-- LangChain
-- Flask
-- Meta Llama2
-- Pinecone
 
 
